@@ -1,0 +1,5 @@
+def repeat(f,n,x):
+	while n>0:
+		x=f(x)
+		n -=1
+	return x
