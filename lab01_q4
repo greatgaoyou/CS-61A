@@ -1,0 +1,21 @@
+
+def sum_digits(n):
+	"""retun sum of all digits in n.
+	sum_digits(10)
+	>>>1
+	sum_digits(8)
+	>>>9
+	sum_digits(100)
+	>>>1
+	"""
+
+	sum =0
+	if n<10:
+		sum =n
+	else:
+		while n>0:
+			sum=n%10+sum
+			n=n//10
+	return sum
+	
+print(sum_digits(9))
