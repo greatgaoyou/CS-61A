@@ -1,0 +1,18 @@
+def double_eights(n):
+	"To tell if there is adjancet 8s in n."
+	a=0
+	while n>0:
+		# print(n)
+		if n%10 ==8:
+			a +=1
+			if a==2:
+				return True
+		else:
+			a=0
+		n=n//10
+		# print(n)
+	return False
+	
+print(double_eights(88 808080))
+
+# double_eights(8808)
