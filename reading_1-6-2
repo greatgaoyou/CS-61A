@@ -1,0 +1,17 @@
+def improve(update,close,guss=1):
+	while not close(guss):
+		guss=update(guss)
+	return guss
+
+def phi_update(x):
+	return 1/x+1
+	
+def phi_close(x):
+	return phi_tell(x*x,x+1)
+	
+def phi_tell(a,b,torr=1e-9):
+	return abs(a-b)<torr
+
+
+print(improve(phi_update,phi_close))
+	
